@@ -10,7 +10,7 @@ const FILE = path.join(__dirname, 'urls.json');
 app.use(cors());
 app.use(express.json());
 
-// Load existing URLs from file or empty
+
 let urlMap = {};
 if (fs.existsSync(FILE)) {
   try {
@@ -21,12 +21,12 @@ if (fs.existsSync(FILE)) {
   }
 }
 
-// Save to file
+
 const saveToFile = () => {
   fs.writeFileSync(FILE, JSON.stringify(urlMap, null, 2));
 };
 
-// POST /api/shorten
+
 app.post('/api/shorten', (req, res) => {
   const { url } = req.body;
 
@@ -46,7 +46,7 @@ app.post('/api/shorten', (req, res) => {
   });
 });
 
-// GET /:code → redirect
+
 app.get('/:code', (req, res) => {
   const code = req.params.code;
   const originalUrl = urlMap[code];
