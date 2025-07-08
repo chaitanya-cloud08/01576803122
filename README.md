@@ -1,6 +1,6 @@
 # 01576803122
 
-#Response Headers
+## Response Headers
 X-Powered-By: Express
 Access-Control-Allow-Origin: *
 Content-Type: application/json; charset=utf-8
@@ -10,7 +10,7 @@ Date: Tue, 08 Jul 2025 05:28:44 GMT
 Connection: keep-alive
 Keep-Alive: timeout=5
 
-#Request Headers 
+## Request Headers 
 Content-Type: application/json
 User-Agent: PostmanRuntime/7.44.1
 Accept: */*
@@ -19,11 +19,12 @@ Host: localhost:3000
 Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
 Content-Length: 41
-#Request Body
+
+## Request Body
 {
   "url": "https://www.google.com"
 }
-#Response Body
+## Response Body
 {"original_url":"https://www.google.com","shortened_url":"https://short.url/wvabz"}
 
 
