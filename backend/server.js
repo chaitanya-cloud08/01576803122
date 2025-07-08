@@ -35,7 +35,7 @@ app.post('/api/shorten', (req, res) => {
   }
 
   const code = Math.random().toString(36).substring(2, 7);
-  const shortUrl = `http://localhost:${PORT}/${code}`;
+  const shortUrl = `http://shorturl/${code}`;
 
   urlMap[code] = url;
   saveToFile();
